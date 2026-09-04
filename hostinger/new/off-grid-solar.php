@@ -1,0 +1,267 @@
+<?php
+$page_key = 'off-grid-solar';
+require_once __DIR__ . '/includes/header.php';
+?>
+
+<main>
+    <!-- HERO HEADER -->
+    <section class="kb-hero-section text-white">
+      <div class="container relative-z">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="kb-badge-offgrid mb-3">🔋 Standalone Autonomous Power</span>
+            <h1 class="display-4 text-light fw-bold mb-3">Off-Grid Solar <span class="text-gradient-gold">Systems Guide</span></h1>
+            <p class="lead text-light mb-4">
+              Achieve 100% electricity independence. Off-Grid solar stores daytime solar energy in high-capacity lithium
+              battery banks to power your property 24/7 without relying on DISCOM power lines.
+            </p>
+
+            <!-- Key Quick Stats -->
+            <div class="row g-3 align-items-center text-center mb-2">
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h4 text-success fw-bold mb-0">100%</div>
+                  <div class="small text-light opacity-75">Grid Independent</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h4 text-warning fw-bold mb-0">24/7</div>
+                  <div class="small text-light opacity-75">Unbroken Backup</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h4 text-info fw-bold mb-0">LiFePO4</div>
+                  <div class="small text-light opacity-75">Lithium Storage</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h4 text-success fw-bold mb-0">0 Cuts</div>
+                  <div class="small text-light opacity-75">Zero Outages</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="kb-image-box shadow-lg">
+              <img src="assets/images/off-grid.webp" alt="Off-Grid Solar System Diagram">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS OFF-GRID SOLAR -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <span class="badge bg-soft-green text-success fw-bold px-3 py-2 rounded-pill uppercase mb-2">Overview</span>
+            <h2 class="display-6 fw-bold mb-3">What is an Off-Grid Solar System?</h2>
+            <p class="text-muted">
+              An <strong>Off-Grid solar system</strong> operates completely disconnected from the public electrical
+              discom grid. It is an autonomous energy station that generates electricity via solar panels, regulates
+              charging via MPPT controllers, stores chemical energy in deep-cycle battery banks, and converts it to
+              usable AC power.
+            </p>
+            <p class="text-muted">
+              Off-Grid systems are essential for remote farmhouses, mountain resorts, rural healthcare clinics,
+              telecommunications towers, and regions experiencing long 6-12 hour electrical blackouts daily.
+            </p>
+
+            <div class="p-4 bg-soft-green rounded-4 border border-success mt-4">
+              <h3 class="h6 fw-bold text-dark mb-2">🌿 Total Energy Self-Sufficiency:</h3>
+              <p class="small text-muted mb-0">
+                With an off-grid solar system, you never receive a DISCOM power bill again. You generate, store, and
+                consume 100% of your clean green electricity locally on site.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card p-4 border-0 bg-slate-dark text-white rounded-4 shadow-lg">
+              <h3 class="h4 fw-bold text-success mb-4">How Off-Grid Solar Works (Step-by-Step)</h3>
+
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="badge bg-success text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">1</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Solar PV Collection</h4>
+                  <p class="small text-light opacity-75 mb-0">Solar panel array converts sunlight into DC electricity
+                    throughout daylight hours.</p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="badge bg-success text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">2</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">MPPT Charge Regulation</h4>
+                  <p class="small text-light opacity-75 mb-0">MPPT solar controller (99% efficiency) steps down voltage
+                    to safely charge the battery bank without overcharging.</p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="badge bg-success text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">3</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Deep Cycle Battery Storage</h4>
+                  <p class="small text-light opacity-75 mb-0">Lithium LFP (LiFePO4) battery modules hold reserve
+                    kilowatt-hours for night and overcast days.</p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <div
+                  class="badge bg-success text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">4</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Pure Sine Wave Inversion</h4>
+                  <p class="small text-light opacity-75 mb-0">Off-grid solar inverter converts DC battery power to clean
+                    230V AC output to run heavy household loads safely.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESSENTIAL COMPONENTS -->
+    <section class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-soft-green text-success fw-bold px-3 py-2 rounded-pill uppercase mb-2">Technical
+            Specs</span>
+          <h2 class="display-6 fw-bold">Essential Components of Off-Grid Systems</h2>
+          <p class="text-muted">Heavy-duty engineered equipment for off-grid survival & endurance.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-green mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">High-Wattage PV Modules</h3>
+              <p class="small text-muted mb-0">Tier-1 Monocrystalline panels designed for high voltage string
+                configurations in low-light environments.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-solar mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">MPPT Charge Controller</h3>
+              <p class="small text-muted mb-0">Tracks the maximum power point dynamically, delivering up to 30% more
+                solar yield into batteries than older PWM controllers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-green mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                  <line x1="16" y1="21" x2="16" y2="5"></line>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">LiFePO4 Lithium Battery Bank</h3>
+              <p class="small text-muted mb-0">Lithium Iron Phosphate battery pack with 15-year life, 90% Depth of
+                Discharge (DoD), and built-in BMS thermal protection.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-solar mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Pure Sine Wave Inverter</h3>
+              <p class="small text-muted mb-0">Surge-capable off-grid inverter that delivers clean harmonic distortion
+                (&lt;3%) suitable for motors, ACs, and electronics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BATTERY CAPACITY SIZING CALCULATOR TABLE -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-soft-green text-success fw-bold px-3 py-2 rounded-pill uppercase mb-2">Sizing
+            Guide</span>
+          <h2 class="display-6 fw-bold">Off-Grid Battery Sizing & Capacity Chart</h2>
+          <p class="text-muted">Recommended solar PV capacity and lithium storage for typical daily appliance loads.</p>
+        </div>
+
+        <div class="table-responsive kb-comparison-table-wrapper">
+          <table class="table kb-comparison-table text-center mb-0">
+            <thead>
+              <tr>
+                <th>System Capacity</th>
+                <th>Daily Power Generation</th>
+                <th>Recommended Lithium Storage</th>
+                <th>Appliance Support</th>
+                <th>Est. System Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>3 kW Off-Grid</strong></td>
+                <td>12 - 14 kWh / day</td>
+                <td><span class="badge bg-success">48V 100Ah (4.8 kWh)</span></td>
+                <td>Lights, Fans, TV, Refrigerator, Laptops, 1 HP Water Pump</td>
+                <td>₹2,40,000 - ₹2,70,000</td>
+              </tr>
+              <tr>
+                <td><strong>5 kW Off-Grid</strong></td>
+                <td>20 - 24 kWh / day</td>
+                <td><span class="badge bg-success">48V 200Ah (9.6 kWh)</span></td>
+                <td>Above + 1.5 Ton Inverter AC (6-8 hours) & Washing Machine</td>
+                <td>₹3,80,000 - ₹4,20,000</td>
+              </tr>
+              <tr>
+                <td><strong>10 kW Off-Grid</strong></td>
+                <td>40 - 48 kWh / day</td>
+                <td><span class="badge bg-success">48V 400Ah (19.2 kWh)</span></td>
+                <td>Full Villa / Commercial Resort with 2 ACs, Motors & Heavy Loads</td>
+                <td>₹7,20,000 - ₹8,00,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-5 bg-light text-white text-center">
+      <div class="container py-4">
+        <h2 class="display-6 fw-bold mb-3">Build Your Independent Solar Power Station</h2>
+        <p class="text-muted mb-4 max-w-700 mx-auto">
+          Consult ADMA Solar off-grid specialists to calculate your daily kWh load profile and design a custom battery
+          storage solution.
+        </p>
+        <a href="contact.php" class="btn-solar-primary btn-lg">Request Free Off-Grid Engineering Audit</a>
+      </div>
+    </section>
+  </main>
+
+<?php require_once __DIR__ . '/includes/footer.php'; ?>

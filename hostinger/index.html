@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMA Solar — Coming Soon</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: '#1a237e',
+                        'navy-deep': '#0d1757',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.9s ease forwards',
+                        'fade-up-delay': 'fadeUp 0.9s ease 0.25s forwards',
+                        'fade-up-delay2': 'fadeUp 0.9s ease 0.5s forwards',
+                        'fade-up-delay3': 'fadeUp 0.9s ease 0.75s forwards',
+                        'fade-up-delay4': 'fadeUp 0.9s ease 1s forwards',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(28px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Hero background image */
+        .hero-bg {
+            background-image: url('image/bg_img.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom,
+                    rgba(20, 18, 14, 0.55) 0%,
+                    rgba(20, 18, 14, 0.62) 60%,
+                    rgba(20, 18, 14, 0.70) 100%);
+        }
+
+        /* opacity-0 initial state for animations */
+        .anim {
+            opacity: 0;
+        }
+
+        /* Letter-spacing for COMING SOON */
+        .coming-soon-text {
+            letter-spacing: 0.22em;
+        }
+
+        /* Notify button gradient */
+        .btn-notify {
+            background: #1a237e;
+        }
+
+        .btn-notify:hover {
+            background: #0d1757;
+        }
+
+        /* Input focus ring */
+        .email-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.35);
+        }
+
+        /* Logo circle */
+        .logo-circle {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.35);
+        }
+
+        /* Footer link */
+        .footer-link {
+            color: #f5c542;
+        }
+
+        /* Instagram icon stroke */
+    </style>
+</head>
+
+<body class="font-body" x-data="{ email: '', submitted: false, error: false }">
+    <div class="relative min-h-screen hero-bg flex flex-col">
+        <!-- Overlay -->
+        <div class="absolute inset-0 hero-overlay pointer-events-none"></div>
+
+        <!-- Content wrapper -->
+        <div class="relative z-10 flex flex-col min-h-screen">
+
+            <!-- Main centered content -->
+            <main class="flex-1 flex flex-col items-center justify-center text-center px-4 py-16">
+
+                <!-- Logo -->
+                <div class="anim animate-fade-up mb-10">
+                    <img src="image/navbar.png" alt="Lane24 Logo" class="w-28 h-auto" style="border-radius:20px;" />
+                </div>
+
+                <!-- Headline -->
+                <h1 class="anim animate-fade-up-delay font-display text-white font-semibold leading-tight mb-4"
+                    style="font-size: clamp(2rem, 5vw, 3.25rem); max-width: 700px;">
+                    We're crafting something special.
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="anim animate-fade-up-delay2 text-white/80 font-body font-light leading-relaxed mb-8"
+                    style="font-size: clamp(0.95rem, 2vw, 1.15rem); max-width: 520px;">
+                    Our website is under construction and will soon unveil<br class="hidden sm:block" />
+                    a curated collection of décor and art.
+                </p>
+
+                <!-- Coming Soon badge -->
+                <div class="anim animate-fade-up-delay2 mb-10">
+                    <span class="font-display font-semibold text-white coming-soon-text tracking-widest"
+                        style="font-size: clamp(1.5rem, 4vw, 2.5rem);">
+                        COMING SOON !"""
+                    </span>
+                </div>
+
+                <!-- Email input -->
+                <div class="anim animate-fade-up-delay3 w-full max-w-lg mb-3">
+                    <template x-if="!submitted">
+                        <div
+                            class="flex items-center bg-white/95 backdrop-blur-sm rounded-full overflow-hidden shadow-lg p-1.5">
+                            <input type="email" x-model="email" placeholder="Enter your email address"
+                                class="email-input flex-1 bg-transparent text-gray-700 placeholder-gray-400 font-body text-sm px-5 py-3 transition"
+                                @keydown.enter="
+                  if (email.includes('@')) { submitted = true; error = false }
+                  else { error = true }
+                " />
+                            <button
+                                class="btn-notify text-white font-body font-medium text-sm px-7 py-3.5 rounded-full transition-all duration-200 whitespace-nowrap"
+                                @click="
+                  if (email.includes('@')) { submitted = true; error = false }
+                  else { error = true }
+                ">
+                                Notify Me
+                            </button>
+                        </div>
+                    </template>
+                    <template x-if="submitted">
+                        <div
+                            class="flex items-center justify-center gap-3 bg-white/95 backdrop-blur-sm rounded-full px-8 py-4 shadow-lg">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700 font-body text-sm">You're on the list! We'll notify you
+                                soon.</span>
+                        </div>
+                    </template>
+                    <p x-show="error" class="text-red-300 text-xs mt-2 font-body">Please enter a valid email address.
+                    </p>
+                </div>
+
+                <!-- No spam note -->
+                <p class="anim animate-fade-up-delay4 text-white/65 font-body text-xs mt-1 tracking-wide">
+                    *Don't worry we will not spam you 😎
+                </p>
+            </main>
+
+            <!-- Footer -->
+            <footer class="anim animate-fade-up-delay4 relative z-10 w-full px-6 py-6">
+                <div
+                    class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white/70 text-xs font-body">
+                    <!-- Instagram -->
+                    <div class="flex items-center gap-2">
+                        <span>Follow us on Instagram for sneak peeks.</span>
+                        <a href="#" aria-label="Instagram"
+                            class="inline-flex hover:text-white transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Email contact -->
+                    <div class="flex items-center gap-1">
+                        <span>Don't hesitate to contact us at</span>
+                        <a href="mailto:info@beaconbearmedia.com"
+                            class="footer-link hover:underline transition ml-1">hi@admasolor.com</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>

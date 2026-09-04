@@ -1,0 +1,249 @@
+<?php
+$page_key = 'calculator';
+require_once __DIR__ . '/includes/header.php';
+?>
+
+<main>
+    <!-- HERO HEADER -->
+    <section class="bg-gradient-solar text-white py-5 pt-5 mt-5">
+      <div class="container py-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-8">
+              <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3">PM Surya Ghar Subsidy Engine</span>
+        <h1 class="display-4 text-light max-w-600 mx-auto fw-bold mb-3">ADMA Solar Savings Calculator</h1>
+        <p class="text-light max-w-600 mx-auto">Instant interactive estimation of solar plant kW capacity, required
+          roof area, annual bill savings, and central government subsidy credit.</p>
+          <a href="#calculator" class="btn-solar-primary btn-lg">Calculate Savings Now</a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light position-relative" id="calculatorWizard">
+      <div class="container py-4">
+
+        <div class="text-center max-w-700 mx-auto mb-4 animate-on-scroll fade-up">
+          <span class="badge bg-soft-green fw-bold px-3 py-2 rounded-pill uppercase mb-2">Solar Savings
+            Calculator</span>
+          <h2 class="display-6 fw-bold text-dark">ADMA Solar Savings Calculator</h2>
+          <p class="text-muted lead">Calculate your recommended solar plant size, monthly generation, annual savings,
+            and government subsidy instantly.</p>
+        </div>
+
+        <div class="zun-calculator-container animate-on-scroll scale-up" id="calculator">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <form id="zunSolarForm" onsubmit="return false;">
+                <div class="mb-3">
+                  <div class="input-group zun-input-group">
+                    <span class="input-group-text zun-input-addon" id="addonPincode">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </span>
+                    <input type="text" class="form-control zun-form-control" id="zunPincode"
+                      placeholder="Pincode (e.g. 110091)" maxlength="6" aria-label="Pincode"
+                      aria-describedby="addonPincode">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="input-group zun-input-group">
+                    <span class="input-group-text zun-input-addon" id="addonState">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                        <line x1="9" y1="6" x2="9" y2="6.01"></line>
+                        <line x1="15" y1="6" x2="15" y2="6.01"></line>
+                        <line x1="9" y1="10" x2="9" y2="10.01"></line>
+                        <line x1="15" y1="10" x2="15" y2="10.01"></line>
+                      </svg>
+                    </span>
+                    <select class="form-select zun-form-select" id="zunState" aria-label="State"
+                      aria-describedby="addonState">
+                      <option value="DELHI" selected>DELHI</option>
+                      <option value="MAHARASHTRA">MAHARASHTRA</option>
+                      <option value="GUJARAT">GUJARAT</option>
+                      <option value="KARNATAKA">KARNATAKA</option>
+                      <option value="TAMIL NADU">TAMIL NADU</option>
+                      <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                      <option value="WEST BENGAL">WEST BENGAL</option>
+                      <option value="RAJASTHAN">RAJASTHAN</option>
+                      <option value="PUNJAB">PUNJAB</option>
+                      <option value="HARYANA">HARYANA</option>
+                      <option value="KERALA">KERALA</option>
+                      <option value="TELANGANA / ANDHRA PRADESH">TELANGANA / ANDHRA PRADESH</option>
+                      <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                      <option value="ODISHA">ODISHA</option>
+                      <option value="ASSAM">ASSAM</option>
+                      <option value="BIHAR">BIHAR</option>
+                      <option value="OTHER STATE">OTHER STATE</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="input-group zun-input-group">
+                    <span class="input-group-text zun-input-addon" id="addonBill">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                      </svg>
+                    </span>
+                    <input type="number" class="form-control zun-form-control" id="zunBill"
+                      placeholder="Average Monthly Bill" min="500" max="500000">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="input-group zun-input-group">
+                    <span class="input-group-text zun-input-addon" id="addonArea">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                      </svg>
+                    </span>
+                    <input type="number" class="form-control zun-form-control" id="zunArea"
+                      placeholder="Rooftop Area( in sq. ft.)" min="50" max="100000">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="input-group zun-input-group">
+                    <span class="input-group-text zun-input-addon" id="addonMobile">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                      </svg>
+                    </span>
+                    <input type="tel" class="form-control zun-form-control" id="zunMobile" placeholder="Mobile Number"
+                      maxlength="10" pattern="[0-9]{10}">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="zun-radio-group">
+                    <label class="zun-radio-option">
+                      <input type="radio" name="zunCategory" value="residential" checked>
+                      <span class="radio-label">
+                        <span class="radio-dot"></span> Residential
+                      </span>
+                    </label>
+                    <label class="zun-radio-option">
+                      <input type="radio" name="zunCategory" value="commercial">
+                      <span class="radio-label">
+                        <span class="radio-dot"></span> Commercial
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-check mb-4">
+                  <input class="form-check-input text-success" type="checkbox" id="zunWhatsApp" checked
+                    style="width: 20px; height: 20px; border-color: #10b981;">
+                  <label class="form-check-label fw-bold text-dark ms-2 pt-1" for="zunWhatsApp">
+                    We can get in touch over WhatsApp!
+                  </label>
+                </div>
+                <button type="button" class="zun-btn-calc w-100" id="btnZunCalculate">Calculate</button>
+
+              </form>
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-between">
+
+              <div class="row g-2 g-sm-3 mb-3">
+                <div class="col-6">
+                  <div class="zun-result-card">
+                    <div class="zun-card-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                      </svg>
+                    </div>
+                    <div class="zun-card-info">
+                      <div class="zun-card-title">Recommended System Size</div>
+                      <div class="zun-card-value" id="zunResKw">-----</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="zun-result-card">
+                    <div class="zun-card-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <div class="zun-card-info">
+                      <div class="zun-card-title">Monthly Units Generated*</div>
+                      <div class="zun-card-value" id="zunResUnits">-----</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="zun-result-card">
+                    <div class="zun-card-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 3h12M6 8h12M6 13l8.5 8M6 13h3a4 4 0 0 0 4-4 4 4 0 0 0-4-4H6" />
+                      </svg>
+                    </div>
+                    <div class="zun-card-info">
+                      <div class="zun-card-title">Annual Savings*</div>
+                      <div class="zun-card-value" id="zunResSavings">-----</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="zun-result-card">
+                    <div class="zun-card-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path
+                          d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h2v2h4v-3.5c1-.5 1.5-1 2-2 1.5-3 1-5 0-6.5-.2-.6-1.5-2-3-2z">
+                        </path>
+                      </svg>
+                    </div>
+                    <div class="zun-card-info">
+                      <div class="zun-card-title">Subsidy Amount*</div>
+                      <div class="zun-card-value" id="zunResSubsidy">-----</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="mb-3">
+                <div class="zun-net-card">
+                  <div class="zun-card-icon" style="width:52px; height:52px;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 3h12M6 8h12M6 13l8.5 8M6 13h3a4 4 0 0 0 4-4 4 4 0 0 0-4-4H6" />
+                    </svg>
+                  </div>
+                  <div class="text-center">
+                    <div class="zun-card-title fs-6">Net Cost After Subsidy*</div>
+                    <div class="zun-card-value fs-3" id="zunResNetCost">-------------</div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="zun-btn-assess w-100" id="btnBookAssessment">Book Free Site
+                Assessment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<?php require_once __DIR__ . '/includes/footer.php'; ?>
