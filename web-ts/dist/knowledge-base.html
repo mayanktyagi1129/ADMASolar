@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Knowledge Base | On-Grid, Off-Grid & Hybrid</title>
+  <meta name="description" content="Guides to On-Grid, Off-Grid, and Hybrid solar systems.">
+  <meta name="author" content="ADMA Solar Energy Ltd.">
+  <link rel="icon" href="assets/icons/adma.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" crossorigin src="./assets/main-C8nuNmWS.js"></script>
+</head>
+<body data-page="knowledge-base">
+  <div id="site-header"></div>
+<main>
+    <!-- HERO SECTION -->
+    <section class="kb-hero-section text-white text-center">
+      <div class="container relative-z">
+        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill uppercase mb-3">ADMA Solar Academy</span>
+        <h1 class="display-4 text-light fw-extrabold mb-3">Solar Technology Knowledge Base</h1>
+        <p class="lead text-light opacity-90 max-w-700 mx-auto mb-4">
+          Master the three main solar architectures: On-Grid, Off-Grid, and Hybrid. Understand working mechanisms, net
+          metering rules, battery storage integration, and government subsidies.
+        </p>
+
+        <!-- Quick Jump Links -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <a href="grid-solar.html" class="btn btn-outline-warning rounded-pill px-4 py-2 fw-semibold">⚡ On-Grid
+            Systems</a>
+          <a href="off-grid-solar.html" class="btn btn-outline-success rounded-pill px-4 py-2 fw-semibold">🔋 Off-Grid
+            Systems</a>
+          <a href="hybrid-solar.html" class="btn btn-outline-info rounded-pill px-4 py-2 fw-semibold">🔄 Hybrid
+            Systems</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN KNOWLEDGE BASE CONTENT WITH INTERACTIVE TABS -->
+    <section class="py-5 bg-light">
+      <div class="container py-4">
+
+        <!-- INTERACTIVE TAB CONTROLS -->
+        <div class="text-center mb-5">
+          <ul class="nav kb-nav-pills justify-content-center" id="kbTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="overview-tab-btn" data-bs-toggle="tab" data-bs-target="#overview-tab"
+                type="button" role="tab">Overview & Types</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="grid-tab-btn" data-bs-toggle="tab" data-bs-target="#grid-tab" type="button"
+                role="tab">⚡ On-Grid Solar</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="offgrid-tab-btn" data-bs-toggle="tab" data-bs-target="#offgrid-tab"
+                type="button" role="tab">🔋 Off-Grid Solar</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="hybrid-tab-btn" data-bs-toggle="tab" data-bs-target="#hybrid-tab"
+                type="button" role="tab">🔄 Hybrid Solar</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="matrix-tab-btn" data-bs-toggle="tab" data-bs-target="#matrix-tab"
+                type="button" role="tab">📊 Comparison Matrix</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TAB CONTENT -->
+        <div class="tab-content" id="kbTabContent">
+
+          <!-- TAB 0: OVERVIEW & TYPES -->
+          <div class="tab-pane fade show active" id="overview-tab" role="tabpanel">
+            <div class="row g-4 align-items-center mb-5">
+              <div class="col-lg-12 text-center mb-3">
+                <h2 class="fw-bold display-6">Understanding Solar Power Architectures</h2>
+                <p class="text-muted lead max-w-800 mx-auto">
+                  Solar energy systems are categorized based on how they connect to the local electricity grid and
+                  whether they store power in batteries for backup. Choose a category below to explore technical
+                  details.
+                </p>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <!-- GRID CARD -->
+              <div class="col-md-4">
+                <div class="kb-card h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="kb-image-box mb-3">
+                      <img src="assets/images/grid-solar.png" alt="On-Grid Solar System Architecture">
+                    </div>
+                    <span class="kb-badge-grid mb-3">⚡ Grid-Tied / On-Grid</span>
+                    <h3 class="h4 fw-bold mt-2">On-Grid Solar System</h3>
+                    <p class="text-muted small">
+                      Connected directly to the electrical discom grid. Export excess power via bi-directional Net
+                      Metering and cut electric bills by up to 90%.
+                    </p>
+                    <ul class="list-unstyled small mb-4">
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Lowest installation capital cost</li>
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Eligible for PM Surya Ghar subsidy</li>
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Zero battery maintenance required</li>
+                    </ul>
+                  </div>
+                  <a href="grid-solar.html" class="btn btn-warning w-100 fw-bold rounded-pill">Explore On-Grid Guide
+                    &rarr;</a>
+                </div>
+              </div>
+
+              <!-- OFF-GRID CARD -->
+              <div class="col-md-4">
+                <div class="kb-card h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="kb-image-box mb-3">
+                      <img src="assets/images/off-grid-solar.png" alt="Off-Grid Solar System Architecture">
+                    </div>
+                    <span class="kb-badge-offgrid mb-3">🔋 Standalone / Off-Grid</span>
+                    <h3 class="h4 fw-bold mt-2">Off-Grid Solar System</h3>
+                    <p class="text-muted small">
+                      100% independent from the utility grid using dedicated battery energy banks. Provides continuous
+                      electricity in remote locations with zero power cuts.
+                    </p>
+                    <ul class="list-unstyled small mb-4">
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Complete DISCOM power independence</li>
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> 24/7 power backup during blackouts</li>
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Ideal for farms, resorts & rural sites
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="off-grid-solar.html" class="btn btn-success w-100 fw-bold rounded-pill text-white">Explore
+                    Off-Grid Guide &rarr;</a>
+                </div>
+              </div>
+
+              <!-- HYBRID CARD -->
+              <div class="col-md-4">
+                <div class="kb-card h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="kb-image-box mb-3">
+                      <img src="assets/images/hybrid-solar.png" alt="Hybrid Solar System Architecture">
+                    </div>
+                    <span class="kb-badge-hybrid mb-3">🔄 Net-Meter + Battery Storage</span>
+                    <h3 class="h4 fw-bold mt-2">Hybrid Solar System</h3>
+                    <p class="text-muted small">
+                      Combines the cost-saving power of grid net metering with the uninterrupted backup of lithium
+                      batteries. Intelligent energy management.
+                    </p>
+                    <ul class="list-unstyled small mb-4">
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Seamless UPS outage switching
+                        (&lt;10ms)</li>
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Exports surplus solar energy to grid
+                      </li>
+                      <li class="kb-pro-item"><span class="kb-pro-icon">✓</span> Future-proof for peak rate shaving</li>
+                    </ul>
+                  </div>
+                  <a href="hybrid-solar.html" class="btn btn-info w-100 fw-bold rounded-pill text-white">Explore Hybrid
+                    Guide &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 1: ON-GRID DETAILS -->
+          <div class="tab-pane fade" id="grid-tab" role="tabpanel">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <span class="kb-badge-grid mb-2">⚡ Utility Synchronized</span>
+                <h2 class="display-6 fw-bold mb-3">On-Grid (Grid-Tied) Solar Architecture</h2>
+                <p class="text-muted">
+                  An On-Grid solar system runs in sync with your local electric discom utility grid. During daytime
+                  hours, solar PV modules power your home appliances directly. Excess solar energy produced is
+                  automatically exported to the grid through a bi-directional Net Meter, generating power credits on
+                  your utility electricity bill.
+                </p>
+
+                <h4 class="h5 fw-bold mt-4 mb-3">Core Operating Mechanism:</h4>
+                <ol class="ps-3 text-muted">
+                  <li class="mb-2"><strong>Solar Photon Generation:</strong> High-efficiency mono PERC panels capture
+                    sunlight and output Direct Current (DC) electricity.</li>
+                  <li class="mb-2"><strong>Inverter Transformation:</strong> Pure Sine Wave Grid-Tied Inverter converts
+                    DC into 230V Single-Phase or 415V Three-Phase AC power synchronized to grid voltage and frequency.
+                  </li>
+                  <li class="mb-2"><strong>Dual-Flow Bi-Directional Net Metering:</strong> If home demand is lower than
+                    solar generation, surplus units flow into the DISCOM grid. At night, your home draws power back from
+                    the grid, offsetting daytime credits.</li>
+                </ol>
+
+                <div class="pt-3">
+                  <a href="grid-solar.html" class="btn btn-warning px-4 py-2 rounded-pill fw-bold">Read Full On-Grid
+                    In-Depth Guide &rarr;</a>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="kb-image-box">
+                  <img src="assets/images/grid-solar.png" alt="On-Grid Solar System Working Flow">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: OFF-GRID DETAILS -->
+          <div class="tab-pane fade" id="offgrid-tab" role="tabpanel">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <span class="kb-badge-offgrid mb-2">🔋 100% Autonomous Storage</span>
+                <h2 class="display-6 fw-bold mb-3">Off-Grid Independent Solar Architecture</h2>
+                <p class="text-muted">
+                  Off-Grid solar systems are completely self-sustaining energy solutions operating independent of the
+                  public power grid. They utilize heavy-duty battery storage banks (Lithium LFP or Tubular Gel) to store
+                  energy collected during daylight for 24-hour uninterrupted operation.
+                </p>
+
+                <h4 class="h5 fw-bold mt-4 mb-3">Core Operating Mechanism:</h4>
+                <ol class="ps-3 text-muted">
+                  <li class="mb-2"><strong>MPPT Charge Regulation:</strong> Maximum Power Point Tracking (MPPT) solar
+                    charge controllers regulate voltage from solar panels to safely charge deep-cycle battery banks.
+                  </li>
+                  <li class="mb-2"><strong>Chemical Energy Storage:</strong> High-capacity LiFePO4 batteries store clean
+                    electrical energy with 95%+ round-trip efficiency and 6,000+ cycle lifespan.</li>
+                  <li class="mb-2"><strong>Autonomous Inversion:</strong> Off-grid inverter delivers clean 230V AC
+                    output to run heavy household loads (refrigerators, pumps, ACs, lights) with zero grid dependence.
+                  </li>
+                </ol>
+
+                <div class="pt-3">
+                  <a href="off-grid-solar.html" class="btn btn-success px-4 py-2 rounded-pill fw-bold text-white">Read
+                    Full Off-Grid In-Depth Guide &rarr;</a>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="kb-image-box">
+                  <img src="assets/images/off-grid-solar.png" alt="Off-Grid Solar System Diagram">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: HYBRID DETAILS -->
+          <div class="tab-pane fade" id="hybrid-tab" role="tabpanel">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <span class="kb-badge-hybrid mb-2">🔄 Bi-Directional Hybrid Power</span>
+                <h2 class="display-6 fw-bold mb-3">Hybrid (Grid-Tie + Battery) Architecture</h2>
+                <p class="text-muted">
+                  Hybrid solar systems offer the ultimate peace of mind by unifying the grid-tied financial bill savings
+                  of Net Metering with the emergency backup capabilities of lithium batteries. If grid power fails,
+                  intelligent Automatic Transfer Switches shift home loads to battery power in less than 10
+                  milliseconds.
+                </p>
+
+                <h4 class="h5 fw-bold mt-4 mb-3">Core Operating Mechanism:</h4>
+                <ol class="ps-3 text-muted">
+                  <li class="mb-2"><strong>Smart Load Prioritization:</strong> Daytime solar energy powers home loads
+                    first, charges the battery second, and exports any remaining excess to the DISCOM grid.</li>
+                  <li class="mb-2"><strong>Instant Outage Switching:</strong> Built-in UPS transition logic keeps
+                    critical appliances, computers, and medical equipment running continuously during grid blackouts.
+                  </li>
+                  <li class="mb-2"><strong>Time-Of-Use Tariff Shaving:</strong> Intelligent inverter firmware discharges
+                    stored battery energy during high-cost peak utility tariff hours.</li>
+                </ol>
+
+                <div class="pt-3">
+                  <a href="hybrid-solar.html" class="btn btn-info px-4 py-2 rounded-pill fw-bold text-white">Read Full
+                    Hybrid In-Depth Guide &rarr;</a>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="kb-image-box">
+                  <img src="assets/images/hybrid-solar.png" alt="Hybrid Solar System Architecture Diagram">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: COMPARISON MATRIX -->
+          <div class="tab-pane fade" id="matrix-tab" role="tabpanel">
+            <div class="text-center mb-4">
+              <h2 class="fw-bold display-6">Side-by-Side System Comparison</h2>
+              <p class="text-muted">Comprehensive evaluation parameters to choose the ideal solar setup for your
+                facility.</p>
+            </div>
+
+            <div class="kb-comparison-table-wrapper">
+              <div class="table-responsive">
+                <table class="table kb-comparison-table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Feature / Parameter</th>
+                      <th>⚡ On-Grid Solar</th>
+                      <th>🔋 Off-Grid Solar</th>
+                      <th>🔄 Hybrid Solar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Grid Connection Required</strong></td>
+                      <td><span class="badge bg-success">Yes (Mandatory)</span></td>
+                      <td><span class="badge bg-secondary">No (Fully Independent)</span></td>
+                      <td><span class="badge bg-success">Yes (Optional Grid Backup)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Battery Storage Included</strong></td>
+                      <td><span class="badge bg-danger">No Batteries</span></td>
+                      <td><span class="badge bg-success">Yes (LiFePO4 / Tubular)</span></td>
+                      <td><span class="badge bg-success">Yes (Lithium Bank)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Net Metering Export Credit</strong></td>
+                      <td><span class="badge bg-success">Yes (100% Eligible)</span></td>
+                      <td><span class="badge bg-danger">No Export</span></td>
+                      <td><span class="badge bg-success">Yes (100% Eligible)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Govt Subsidy (PM Surya Ghar)</strong></td>
+                      <td><span class="badge bg-success">Up to ₹78,000</span></td>
+                      <td><span class="badge bg-danger">Not Eligible</span></td>
+                      <td><span class="badge bg-warning text-dark">Partial (Solar portion)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Power Output During Outages</strong></td>
+                      <td><span class="badge bg-danger">Shuts Down (Safety anti-islanding)</span></td>
+                      <td><span class="badge bg-success">24/7 Power Supply</span></td>
+                      <td><span class="badge bg-success">24/7 Power Supply (&lt;10ms UPS)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Capital Investment Cost</strong></td>
+                      <td><span class="badge bg-primary">Lowest ($ / kW)</span></td>
+                      <td><span class="badge bg-warning text-dark">High (Battery cost)</span></td>
+                      <td><span class="badge bg-dark">Premium High</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>System ROI / Payback Period</strong></td>
+                      <td><strong>3 to 4 Years</strong></td>
+                      <td><strong>6 to 8 Years</strong></td>
+                      <td><strong>4 to 5 Years</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Ideal For</strong></td>
+                      <td>Cities/Urban areas with reliable 24/7 grid</td>
+                      <td>Remote farms, villages, severe blackout areas</td>
+                      <td>Homes & businesses needing zero outage risk</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SYSTEM FINDER QUIZ -->
+    <section class="py-5 bg-slate-dark text-white">
+      <div class="container py-4">
+        <div class="max-w-800 mx-auto kb-quiz-box">
+          <div class="text-center mb-4">
+            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">Interactive Quiz</span>
+            <h2 class="fw-bold display-6 text-white">Which Solar System Is Right For You?</h2>
+            <p class="text-light opacity-75">Answer 3 quick questions to get an instant engineering recommendation.</p>
+          </div>
+
+          <form id="solarQuizForm">
+            <!-- Question 1 -->
+            <div class="mb-4">
+              <label class="form-label fw-bold text-warning mb-2">1. How frequent are power cuts in your area?</label>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="kb-quiz-option active" data-q1="rare">
+                    <strong>Rare / Minimal</strong>
+                    <div class="small opacity-75">Less than 30 mins a week</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="kb-quiz-option" data-q1="moderate">
+                    <strong>Moderate</strong>
+                    <div class="small opacity-75">1 to 3 hours daily</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="kb-quiz-option" data-q1="severe">
+                    <strong>Severe / No Grid</strong>
+                    <div class="small opacity-75">Frequent long cuts or off-grid</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="mb-4">
+              <label class="form-label fw-bold text-warning mb-2">2. What is your primary objective?</label>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="kb-quiz-option active" data-q2="bill">
+                    <strong>Max Bill Savings</strong>
+                    <div class="small opacity-75">Fastest payback & ROI</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="kb-quiz-option" data-q2="backup">
+                    <strong>100% Power Backup</strong>
+                    <div class="small opacity-75">Never lose power</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="kb-quiz-option" data-q2="both">
+                    <strong>Savings + Backup</strong>
+                    <div class="small opacity-75">Best of both worlds</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recommendation Result Box -->
+            <div id="quizResultBox" class="p-4 bg-dark rounded-4 border border-warning mt-4 text-center">
+              <h4 class="h5 fw-bold text-warning mb-1" id="quizRecTitle">Recommended: On-Grid Solar System</h4>
+              <p class="small text-light opacity-90 mb-3" id="quizRecDesc">
+                Since power cuts are rare and your goal is maximum bill reduction with PM Surya Ghar subsidy, an On-Grid
+                system provides the best ROI (3-year payback).
+              </p>
+              <a href="grid-solar.html" id="quizRecBtn" class="btn btn-warning fw-bold px-4 rounded-pill">View On-Grid
+                System Details &rarr;</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-soft-green text-success fw-bold px-3 py-2 rounded-pill uppercase mb-2">Solar FAQs</span>
+          <h2 class="display-6 fw-bold">Frequently Asked Questions</h2>
+          <p class="text-muted">Clear answers to essential solar installation queries.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion accordion-custom" id="kbFaqAccordion">
+              <div class="accordion-item border rounded-3 mb-3">
+                <h3 class="accordion-header" id="faqHead1">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse1" aria-expanded="true">
+                    What happens to an On-Grid solar system during a power outage?
+                  </button>
+                </h3>
+                <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#kbFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    For safety reasons, On-Grid solar inverters feature an automated <strong>Anti-Islanding
+                      Protection</strong> mechanism. When the utility grid power fails, the inverter automatically shuts
+                    down within milliseconds to prevent backfeeding high-voltage electricity into grid lines where
+                    DISCOM utility technicians may be carrying out repair work. If power cuts are frequent in your area,
+                    consider a <strong>Hybrid Solar System</strong> with battery storage.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded-3 mb-3">
+                <h3 class="accordion-header" id="faqHead2">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse2">
+                    How does Net Metering work under PM Surya Ghar Muft Bijli Yojana?
+                  </button>
+                </h3>
+                <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#kbFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    Net Metering is a DISCOM billing agreement that uses a bi-directional electricity meter to measure
+                    both power imported from the grid and excess solar electricity exported to the grid. At the end of
+                    every monthly billing cycle, your net electricity bill is calculated as
+                    <code>[Units Consumed - Units Exported]</code>. If exports exceed consumption, credits roll over to
+                    subsequent months or are reimbursed at DISCOM feed-in rates.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded-3 mb-3">
+                <h3 class="accordion-header" id="faqHead3">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapse3">
+                    What is the expected lifespan of solar panels and batteries?
+                  </button>
+                </h3>
+                <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#kbFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    Tier-1 Mono PERC / TOPCon solar panels come with a 25-Year Performance Warranty (retaining 80%+
+                    generation output after 25 years). Grid inverters typically last 10-12 years. Modern Lithium Iron
+                    Phosphate (LiFePO4) solar batteries last 10 to 15 years (6,000+ deep discharge cycles), whereas
+                    traditional lead-acid solar tubular batteries last 4 to 6 years.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-5 bg-gradient-amber text-white text-center">
+      <div class="container py-4">
+        <h2 class="display-6 fw-bold mb-3">Ready to Convert Your Roof into a Power Generator?</h2>
+        <p class="lead text-white opacity-90 mb-4 max-w-700 mx-auto">
+          Get a customized solar engineering proposal with exact ROI breakdown and government subsidy assistance.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="calculator.html" class="btn btn-dark btn-lg rounded-pill px-4">Calculate Solar Savings</a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-4">Speak to a Solar Engineer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/leaflet.js"></script>
+</body>
+</html>

@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQ) | ADMA Solar Energy</title>
+  <meta name="description" content="57 answers on rooftop solar, subsidy, net metering, and maintenance.">
+  <meta name="author" content="ADMA Solar Energy Ltd.">
+  <link rel="icon" href="assets/icons/adma.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="faq">
+  <div id="site-header"></div>
+<main>
+  <!-- HERO / BANNER SECTION -->
+  <section class="bg-gradient-solar text-white py-5 text-center position-relative overflow-hidden">
+    <div class="container relative-z py-4">
+      <span class="badge bg-soft-green text-success fw-bold px-3 py-2 rounded-pill uppercase mb-3">Knowledge Base & Help Center</span>
+      <h1 class="display-4 text-light fw-bold mb-3">Frequently Asked <span class="text-gradient-gold">Questions</span></h1>
+      <p class="lead text-light opacity-90 max-w-800 mx-auto mb-4">
+        Going solar is a long-term investment. Naturally, you may have questions about savings, system selection, installation, subsidy, power backup, and maintenance. Here are answers to all 57 questions we hear most often.
+      </p>
+
+      <!-- Live Search Box -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-8 col-lg-6">
+          <div class="input-group input-group-lg shadow-lg rounded-pill overflow-hidden bg-white p-1">
+            <span class="input-group-text bg-white border-0 ps-3 text-muted">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" id="faqSearchInput" class="form-control border-0 shadow-none fs-6 text-dark" placeholder="Search any question or keyword (e.g. subsidy, battery, net metering)..." aria-label="Search FAQs">
+            <button class="btn btn-warning rounded-pill px-4 fw-bold text-dark" type="button" id="faqSearchResetBtn">Clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION WITH CATEGORIES & ACCORDIONS -->
+  <section class="py-5 bg-light position-relative">
+    <div class="container py-3">
+      <div class="row mb-5 justify-content-between">
+        <div class="col-md-8">
+          <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start" id="categoryFilterPills">
+              <button class="btn btn-sm btn-dark rounded-pill px-3 py-2 active" data-category="all">All Questions (57)</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-1">Getting Started</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-2">System Selection</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-3">Cost & Savings</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-4">Subsidy & Approvals</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-5">Installation</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-6">Performance</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-7">Maintenance</button>
+              <button class="btn btn-sm btn-outline-dark rounded-pill px-2 py-1" data-category="cat-8">Why ADMA Solar</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex gap-2 shrink-0">
+              <button class="btn btn-outline-secondary btn-sm rounded-pill px-2" id="expandAllBtn">Expand All</button>
+              <button class="btn btn-outline-secondary btn-sm rounded-pill px-2" id="collapseAllBtn">Collapse All</button>
+        </div>
+        </div>
+      </div> 
+      <div id="noResultsMsg" class="text-center py-5 d-none">
+        <div class="mb-3 text-muted">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h4 class="fw-bold">No matching questions found</h4>
+        <p class="text-muted">Try searching with a different keyword or browse through the categories above.</p>
+        <button class="btn btn-warning rounded-pill px-4 mt-2" onclick="document.getElementById('faqSearchInput').value=''; filterFaqs();">View All FAQs</button>
+      </div>
+
+      <div class="row justify-content-center" id="faqContentContainer">
+        <div class="col-md-12">
+
+          <!-- ================= CATEGORY 1 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-1">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-warning ps-3">
+              <span class="badge bg-warning text-dark fs-6 rounded-pill px-3">Section 1</span>
+              <h2 class="h3 fw-bold m-0">Getting Started with Solar</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat1">
+              
+              <!-- Q1 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading1">
+                  <button class="accordion-button fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    1. Is solar right for my home or business?
+                  </button>
+                </h3>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    In most cases, yes—provided you have suitable space and sufficient access to sunlight.<br><br>
+                    The right solution depends on factors such as your electricity consumption, available rooftop area, shading, type of connection and your future energy requirements.<br><br>
+                    At ADMA Solar, we begin by understanding your energy needs before recommending a system.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q2 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading2">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    2. What size solar system do I need?
+                  </button>
+                </h3>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The right solar capacity is based on more than just your monthly electricity bill. We also consider your consumption pattern, rooftop availability, sanctioned load, future requirements and the type of solar system you choose.<br><br>
+                    Share your electricity bill with us, and we can help you determine the capacity that makes the most sense for your needs.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q3 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading3">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    3. How much electricity can a solar system generate?
+                  </button>
+                </h3>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Solar generation depends on system capacity, location, sunlight availability, weather, panel orientation, shading and overall system design.<br><br>
+                    Rather than relying on generic estimates, ADMA Solar can provide an expected generation assessment based on your specific site and proposed system.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q4 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading4">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    4. How much rooftop space do I need for solar?
+                  </button>
+                </h3>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    As a general guideline, approximately 80–100 sq. ft. of usable, shadow-free rooftop area may be required per kW.<br><br>
+                    The actual requirement can vary depending on the solar panels, roof layout, orientation and mounting structure.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q5 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading5">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    5. What if my rooftop has shade?
+                  </button>
+                </h3>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Shade can affect the performance of solar panels. However, partial shading does not always mean solar is unsuitable.<br><br>
+                    A proper site assessment can identify the source and pattern of shading and help determine the best possible panel layout and system design.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q6 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading6">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    6. Can solar be installed on an existing house or building?
+                  </button>
+                </h3>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. Rooftop solar can be installed on most existing residential, commercial and industrial buildings, subject to the condition and suitability of the roof.<br><br>
+                    Before installation, the site should be assessed for structural considerations, usable space, shading and accessibility.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q7 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading7">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    7. Can solar panels be installed on a metal shed or elevated structure?
+                  </button>
+                </h3>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes, solar panels can be installed on suitable metal sheds or specially designed elevated mounting structures.<br><br>
+                    The right approach depends on structural strength, wind considerations, available space and the intended use of the area below.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q8 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-1">
+                <h3 class="accordion-header" id="heading8">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                    8. What if my electricity consumption increases in the future?
+                  </button>
+                </h3>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionCat1">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Your future energy needs can be considered while designing the system.<br><br>
+                    If you expect to add appliances such as air conditioners, electric vehicles or other high-consumption equipment, let us know during the planning stage. We can help design a solution with future requirements in mind.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 2 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-2">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-success ps-3">
+              <span class="badge bg-success text-white fs-6 rounded-pill px-3">Section 2</span>
+              <h2 class="h3 fw-bold m-0">Choosing the Right Solar System</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat2">
+
+              <!-- Q9 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading9">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                    9. What is an On-Grid solar system?
+                  </button>
+                </h3>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    An On-Grid solar system works in connection with the electricity grid and is primarily designed to reduce your electricity bills.<br><br>
+                    During periods when your solar system generates more electricity than you consume, the treatment of excess electricity depends on the applicable utility and regulatory arrangement.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q10 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading10">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                    10. What is a Hybrid solar system?
+                  </button>
+                </h3>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    A Hybrid solar system combines solar power with grid connectivity and battery storage.<br><br>
+                    It is designed for customers who want to reduce their electricity bills while also having the option of power backup during grid outages.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q11 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading11">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                    11. What is an Off-Grid solar system?
+                  </button>
+                </h3>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    An Off-Grid solar system operates independently of the electricity grid and typically uses batteries to store energy for use when solar generation is unavailable.<br><br>
+                    It can be suitable for locations where grid connectivity is unavailable or unreliable.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q12 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading12">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                    12. Which type of solar system is right for me?
+                  </button>
+                </h3>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The answer depends on your priorities.<br>
+                    • Choose an <strong>On-Grid system</strong> if your primary goal is to reduce electricity costs.<br>
+                    • Consider a <strong>Hybrid system</strong> if power backup is also important.<br>
+                    • An <strong>Off-Grid system</strong> may be suitable where dependable grid electricity is not available.<br><br>
+                    Not sure which one to choose? ADMA Solar can help you compare the options based on your actual requirements—not just the upfront price.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q13 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading13">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                    13. Will an On-Grid solar system work during a power cut?
+                  </button>
+                </h3>
+                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    For safety reasons, a standard On-Grid solar system automatically shuts down when the grid fails. This prevents electricity from being fed back into the grid while maintenance or emergency work is being carried out.<br><br>
+                    If you need power during outages, a Hybrid system with suitable battery backup may be a better option.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q14 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading14">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                    14. How does battery backup work with solar?
+                  </button>
+                </h3>
+                <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    In a Hybrid system, solar energy can be used to power your loads, while excess energy may be stored in batteries depending on the system configuration and operating conditions.<br><br>
+                    During a power outage, the battery can supply selected loads for a duration that depends on battery capacity and electricity consumption.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q15 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading15">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                    15. Can I add a battery to my solar system later?
+                  </button>
+                </h3>
+                <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    In many cases, yes—but this depends on the type of inverter and the original system design.<br><br>
+                    If future battery backup is part of your plan, it is worth discussing this before installation so the right equipment and upgrade path can be considered.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q16 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-2">
+                <h3 class="accordion-header" id="heading16">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                    16. Can I expand my solar system in the future?
+                  </button>
+                </h3>
+                <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16" data-bs-parent="#accordionCat2">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Expansion may be possible, depending on factors such as available rooftop space, inverter capacity, electrical configuration and applicable regulations.<br><br>
+                    If you expect your electricity requirements to increase, we recommend discussing this during the initial design stage.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 3 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-3">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-info ps-3">
+              <span class="badge bg-info text-dark fs-6 rounded-pill px-3">Section 3</span>
+              <h2 class="h3 fw-bold m-0">Cost, Savings & Your Investment</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat3">
+
+              <!-- Q17 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading17">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                    17. How much does a rooftop solar system cost?
+                  </button>
+                </h3>
+                <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The cost depends on several factors, including:
+                    <ul class="mt-2 mb-2 ps-3">
+                      <li>System capacity</li>
+                      <li>Type of solar system</li>
+                      <li>Quality and configuration of equipment</li>
+                      <li>Rooftop conditions and mounting requirements</li>
+                      <li>Battery backup requirements, where applicable</li>
+                    </ul>
+                    The best solar system is not necessarily the cheapest—or the largest. It is the one designed to deliver the right balance of performance, reliability and value for your needs.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q18 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading18">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                    18. How much can I save on my electricity bill?
+                  </button>
+                </h3>
+                <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Your savings depend on your electricity consumption, tariff, solar generation, system size and applicable utility arrangements.<br><br>
+                    A well-designed solar system can significantly reduce the amount of electricity you need to purchase from the grid.<br><br>
+                    ADMA Solar can help estimate your potential savings based on your actual electricity usage.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q19 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading19">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                    19. How long will it take to recover my investment?
+                  </button>
+                </h3>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The payback period varies from project to project and depends on system cost, electricity tariffs, energy consumption, solar generation and applicable financial benefits.<br><br>
+                    A solar system should be evaluated as a long-term investment rather than only on its initial cost.<br><br>
+                    We believe in clear, realistic projections—not exaggerated savings promises.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q20 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading20">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                    20. Will I still receive an electricity bill after installing solar?
+                  </button>
+                </h3>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes, in most cases you may still receive an electricity bill.<br><br>
+                    The amount will depend on your consumption, solar generation, fixed charges, applicable tariffs and the rules governing your electricity connection.<br><br>
+                    Solar can significantly reduce your bill, but it does not necessarily mean that every customer will receive a zero bill every month.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q21 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading21">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                    21. What happens if my solar system generates more electricity than I consume?
+                  </button>
+                </h3>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    For eligible grid-connected systems, excess electricity may be exported or accounted for according to the applicable DISCOM arrangement, regulatory rules and meter configuration.<br><br>
+                    The exact treatment of surplus electricity can vary by location and prevailing regulations.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q22 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading22">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                    22. Are EMI or solar financing options available?
+                  </button>
+                </h3>
+                <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Solar financing options may be available through banks, NBFCs or other financial partners, depending on eligibility and the products available at the time.<br><br>
+                    If financing is an important part of your decision, speak with our team to explore the options applicable to your project.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q23 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading23">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                    23. Is a bigger solar system always better?
+                  </button>
+                </h3>
+                <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Not necessarily.<br><br>
+                    An oversized system may increase your upfront investment without delivering the expected financial benefit, depending on your electricity consumption and applicable regulations.<br><br>
+                    The goal should be to install a system that is appropriately sized for your present and expected future requirements.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q24 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-3">
+                <h3 class="accordion-header" id="heading24">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                    24. How do I know whether solar is a good financial decision for me?
+                  </button>
+                </h3>
+                <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24" data-bs-parent="#accordionCat3">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The best way is to evaluate your electricity bills, consumption pattern, rooftop suitability, expected solar generation and project cost together.<br><br>
+                    ADMA Solar can help you understand the numbers before you make the investment—clearly and transparently.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 4 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-4">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-warning ps-3">
+              <span class="badge bg-warning text-dark fs-6 rounded-pill px-3">Section 4</span>
+              <h2 class="h3 fw-bold m-0">Subsidy, Approvals & Net Metering</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat4">
+
+              <!-- Q25 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading25">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                    25. Can I get a government subsidy for rooftop solar?
+                  </button>
+                </h3>
+                <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Eligible residential consumers may be able to receive financial assistance under applicable government rooftop solar programmes.<br><br>
+                    Eligibility, benefits and processes are subject to prevailing government guidelines and requirements.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q26 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading26">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                    26. How much subsidy can I receive?
+                  </button>
+                </h3>
+                <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The subsidy amount, eligibility conditions and applicable limits are determined by the relevant government scheme and may change over time.<br><br>
+                    Our team can guide you on the current process and help you understand the requirements applicable to your project.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q27 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading27">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                    27. Does ADMA Solar help with the subsidy process?
+                  </button>
+                </h3>
+                <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. Where applicable, ADMA Solar can guide customers through the relevant process, documentation and installation requirements.<br><br>
+                    The final approval and release of any subsidy remain subject to the applicable scheme and the relevant authorities.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q28 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading28">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                    28. What is net metering?
+                  </button>
+                </h3>
+                <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Net metering is a mechanism that allows eligible grid-connected solar consumers to account for electricity generated by their rooftop solar system in accordance with the applicable utility and regulatory framework.<br><br>
+                    The exact process, eligibility and settlement mechanism can vary depending on your DISCOM and prevailing regulations.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q29 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading29">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                    29. How does net metering work?
+                  </button>
+                </h3>
+                <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    A suitable meter records electricity imported from and, where applicable, exported to the grid.<br><br>
+                    The adjustment or settlement of this electricity is governed by the applicable regulations and your electricity distribution company.<br><br>
+                    ADMA Solar can help you understand how the process applies to your connection.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q30 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading30">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                    30. What approvals are required before installing solar?
+                  </button>
+                </h3>
+                <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The requirements depend on your location, electricity connection and the type of system being installed.<br><br>
+                    Depending on the project, this may involve documentation, technical approvals, meter-related processes and other requirements specified by the relevant authorities or DISCOM.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q31 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading31">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                    31. How long does the approval and meter process take?
+                  </button>
+                </h3>
+                <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Timelines can vary depending on the location, documentation, utility processes and current workload of the relevant authorities.<br><br>
+                    While ADMA Solar can guide and support you through the process, certain timelines may remain outside the installer's direct control.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q32 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-4">
+                <h3 class="accordion-header" id="heading32">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                    32. What documents will I need?
+                  </button>
+                </h3>
+                <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32" data-bs-parent="#accordionCat4">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Documentation requirements can vary based on your electricity connection, location and applicable scheme or approval process.<br><br>
+                    Our team can provide you with a clear checklist based on your specific project.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 5 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-5">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-primary ps-3">
+              <span class="badge bg-primary text-white fs-6 rounded-pill px-3">Section 5</span>
+              <h2 class="h3 fw-bold m-0">Installation & Project Execution</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat5">
+
+              <!-- Q33 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-5">
+                <h3 class="accordion-header" id="heading33">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+                    33. What is the process of installing a solar system?
+                  </button>
+                </h3>
+                <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33" data-bs-parent="#accordionCat5">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    A typical solar journey with ADMA Solar may include:
+                    <div class="p-3 bg-white border rounded-3 my-2 text-dark font-monospace small">
+                      Understanding your requirements &rarr; Electricity bill analysis &rarr; Site assessment &rarr; System design &rarr; Proposal &rarr; Documentation & applicable approvals &rarr; Installation &rarr; Testing and commissioning &rarr; System handover
+                    </div>
+                    The exact process may vary depending on the type and location of your project.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q34 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-5">
+                <h3 class="accordion-header" id="heading34">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+                    34. How long does solar installation take?
+                  </button>
+                </h3>
+                <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34" data-bs-parent="#accordionCat5">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The physical installation of a typical residential system can often be completed within a few days.<br><br>
+                    The complete project timeline may be longer depending on site conditions, equipment availability, approvals and meter-related processes.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q35 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-5">
+                <h3 class="accordion-header" id="heading35">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+                    35. Will solar installation damage my roof?
+                  </button>
+                </h3>
+                <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35" data-bs-parent="#accordionCat5">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    A properly designed and professionally installed mounting system is intended to secure the solar panels while considering the type and condition of your roof.<br><br>
+                    A site assessment helps determine the most appropriate installation method.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q36 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-5">
+                <h3 class="accordion-header" id="heading36">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+                    36. Will my electricity supply be interrupted during installation?
+                  </button>
+                </h3>
+                <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36" data-bs-parent="#accordionCat5">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Most installation work can be carried out without significant disruption to your normal electricity supply.<br><br>
+                    A brief interruption may be required during certain electrical connection or commissioning activities.<br><br>
+                    Our team will coordinate the work to minimise inconvenience wherever possible.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q37 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-5">
+                <h3 class="accordion-header" id="heading37">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+                    37. Do I need to be present during installation?
+                  </button>
+                </h3>
+                <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37" data-bs-parent="#accordionCat5">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    You do not necessarily need to supervise the entire installation.<br><br>
+                    However, access to the rooftop, electrical areas and other required locations should be available, and a responsible person may be required for coordination when necessary.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q38 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-5">
+                <h3 class="accordion-header" id="heading38">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                    38. Who installs my solar system?
+                  </button>
+                </h3>
+                <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38" data-bs-parent="#accordionCat5">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    ADMA Solar works through its installation process to ensure that the system is installed according to the approved design and project requirements.<br><br>
+                    Our focus is not simply on installing equipment—it is on delivering a complete, properly designed solar solution.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 6 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-6">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-dark ps-3">
+              <span class="badge bg-dark text-white fs-6 rounded-pill px-3">Section 6</span>
+              <h2 class="h3 fw-bold m-0">Solar Performance & Everyday Questions</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat6">
+
+              <!-- Q39 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading39">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+                    39. Will solar panels work on cloudy days?
+                  </button>
+                </h3>
+                <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="heading39" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. Solar panels can still generate electricity on cloudy days, although generation will generally be lower than on a clear, sunny day.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q40 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading40">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                    40. Do solar panels work during rain?
+                  </button>
+                </h3>
+                <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. Solar panels continue to generate electricity during rainy conditions when sufficient daylight is available, although output may be reduced due to cloud cover.<br><br>
+                    Rain can also help remove some dust from the panels, though it should not be considered a replacement for regular cleaning where required.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q41 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading41">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+                    41. Do solar panels generate electricity at night?
+                  </button>
+                </h3>
+                <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    No. Solar panels generate electricity from sunlight and therefore do not produce solar power at night.<br><br>
+                    At night, your electricity needs may be met by the grid or by battery storage in a suitably configured Hybrid or Off-Grid system.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q42 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading42">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+                    42. Does extreme heat affect solar panels?
+                  </button>
+                </h3>
+                <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="heading42" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Solar panels are designed to operate outdoors in varying weather conditions. However, very high temperatures can affect electrical performance.<br><br>
+                    This is why proper system design, equipment selection and installation practices are important.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q43 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading43">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+                    43. How does dust affect solar generation?
+                  </button>
+                </h3>
+                <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="heading43" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    A layer of dust or dirt can reduce the amount of sunlight reaching the solar cells and may affect generation.<br><br>
+                    Regular cleaning, based on local environmental conditions, helps maintain system performance.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q44 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading44">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+                    44. What happens if a solar panel is partially shaded?
+                  </button>
+                </h3>
+                <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="heading44" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Even partial shading can affect the performance of the affected panel and, depending on the system design, other parts of the array.<br><br>
+                    A proper site assessment and thoughtful panel layout can help minimise the impact of shading.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q45 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-6">
+                <h3 class="accordion-header" id="heading45">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+                    45. Can I monitor my solar system?
+                  </button>
+                </h3>
+                <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="heading45" data-bs-parent="#accordionCat6">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. Many modern solar inverters offer mobile applications or online monitoring platforms.<br><br>
+                    Depending on the equipment selected, you may be able to track generation, system status and other performance information from your smartphone.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 7 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-7">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-danger ps-3">
+              <span class="badge bg-danger text-white fs-6 rounded-pill px-3">Section 7</span>
+              <h2 class="h3 fw-bold m-0">Maintenance, Warranty & Long-Term Support</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat7">
+
+              <!-- Q46 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-7">
+                <h3 class="accordion-header" id="heading46">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+                    46. How much maintenance does a solar system require?
+                  </button>
+                </h3>
+                <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="heading46" data-bs-parent="#accordionCat7">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Solar systems generally require relatively low maintenance.<br><br>
+                    Periodic cleaning of the panels and occasional inspection of electrical and structural components can help maintain reliable performance.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q47 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-7">
+                <h3 class="accordion-header" id="heading47">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+                    47. How often should solar panels be cleaned?
+                  </button>
+                </h3>
+                <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="heading47" data-bs-parent="#accordionCat7">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The ideal cleaning frequency depends on local dust levels, pollution, bird activity and rainfall.<br><br>
+                    Rather than following a fixed schedule for every location, panels should be inspected periodically and cleaned when necessary.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q48 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-7">
+                <h3 class="accordion-header" id="heading48">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse48" aria-expanded="false" aria-controls="collapse48">
+                    48. How long do solar panels last?
+                  </button>
+                </h3>
+                <div id="collapse48" class="accordion-collapse collapse" aria-labelledby="heading48" data-bs-parent="#accordionCat7">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Solar panels are designed for long-term operation and typically continue generating electricity for many years.<br><br>
+                    Their output may gradually reduce over time, which is why manufacturers generally provide long-term performance warranties.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q49 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-7">
+                <h3 class="accordion-header" id="heading49">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse49" aria-expanded="false" aria-controls="collapse49">
+                    49. What warranties are provided with the solar system?
+                  </button>
+                </h3>
+                <div id="collapse49" class="accordion-collapse collapse" aria-labelledby="heading49" data-bs-parent="#accordionCat7">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Warranty coverage depends on the specific equipment and manufacturer.<br><br>
+                    Solar panels, inverters, batteries and mounting components may each have different warranty terms.<br><br>
+                    Your project documentation should clearly specify the equipment supplied and the applicable warranty coverage.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q50 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-7">
+                <h3 class="accordion-header" id="heading50">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse50" aria-expanded="false" aria-controls="collapse50">
+                    50. What happens if my inverter or another component develops a problem?
+                  </button>
+                </h3>
+                <div id="collapse50" class="accordion-collapse collapse" aria-labelledby="heading50" data-bs-parent="#accordionCat7">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    The appropriate response depends on the equipment, nature of the issue and applicable warranty or service coverage.<br><br>
+                    ADMA Solar can assist in diagnosing the issue and guiding you through the relevant service or warranty process.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q51 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-7">
+                <h3 class="accordion-header" id="heading51">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse51" aria-expanded="false" aria-controls="collapse51">
+                    51. Does ADMA Solar provide support after installation?
+                  </button>
+                </h3>
+                <div id="collapse51" class="accordion-collapse collapse" aria-labelledby="heading51" data-bs-parent="#accordionCat7">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Our relationship with the customer does not have to end on installation day.<br><br>
+                    ADMA Solar aims to support customers with system-related guidance and assistance throughout their solar journey, subject to the applicable scope of service and equipment warranty terms.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ================= CATEGORY 8 ================= -->
+          <div class="faq-category-block mb-5" data-cat-id="cat-8">
+            <div class="d-flex align-items-center gap-3 mb-4 border-start border-4 border-warning ps-3">
+              <span class="badge bg-warning text-dark fs-6 rounded-pill px-3">Section 8</span>
+              <h2 class="h3 fw-bold m-0">Why Choose ADMA Solar?</h2>
+            </div>
+            <div class="accordion custom-faq-accordion" id="accordionCat8">
+
+              <!-- Q52 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-8">
+                <h3 class="accordion-header" id="heading52">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse52" aria-expanded="false" aria-controls="collapse52">
+                    52. Why should I choose ADMA Solar?
+                  </button>
+                </h3>
+                <div id="collapse52" class="accordion-collapse collapse" aria-labelledby="heading52" data-bs-parent="#accordionCat8">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Because going solar is more than buying panels and an inverter.<br><br>
+                    It is about understanding your energy needs, designing the right system, using suitable equipment and ensuring that the installation is planned and executed properly.<br><br>
+                    At ADMA Solar, our approach is simple: understand first, design carefully and deliver transparently.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q53 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-8">
+                <h3 class="accordion-header" id="heading53">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse53" aria-expanded="false" aria-controls="collapse53">
+                    53. Does ADMA Solar provide a site assessment?
+                  </button>
+                </h3>
+                <div id="collapse53" class="accordion-collapse collapse" aria-labelledby="heading53" data-bs-parent="#accordionCat8">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. A site assessment helps us understand important factors such as rooftop space, shading, orientation, accessibility and installation requirements.<br><br>
+                    This allows us to recommend a solution based on your actual site—not assumptions.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q54 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-8">
+                <h3 class="accordion-header" id="heading54">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse54" aria-expanded="false" aria-controls="collapse54">
+                    54. Will ADMA Solar customise the system for my requirements?
+                  </button>
+                </h3>
+                <div id="collapse54" class="accordion-collapse collapse" aria-labelledby="heading54" data-bs-parent="#accordionCat8">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Yes. Your electricity consumption, rooftop conditions, budget, backup requirements and future plans can all influence the recommended system.<br><br>
+                    We believe your solar solution should fit your requirements—not force your requirements to fit a standard package.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q55 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-8">
+                <h3 class="accordion-header" id="heading55">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse55" aria-expanded="false" aria-controls="collapse55">
+                    55. Does ADMA Solar handle the complete project?
+                  </button>
+                </h3>
+                <div id="collapse55" class="accordion-collapse collapse" aria-labelledby="heading55" data-bs-parent="#accordionCat8">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    ADMA Solar can support you through the key stages of your solar journey—from initial consultation and system design to installation, commissioning and guidance on applicable documentation and processes.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q56 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-8">
+                <h3 class="accordion-header" id="heading56">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse56" aria-expanded="false" aria-controls="collapse56">
+                    56. What brands of solar panels and inverters does ADMA Solar use?
+                  </button>
+                </h3>
+                <div id="collapse56" class="accordion-collapse collapse" aria-labelledby="heading56" data-bs-parent="#accordionCat8">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    Equipment selection depends on the project requirements, system design, availability and the solution agreed with the customer.<br><br>
+                    We believe customers should understand what is being installed and why. The proposed equipment and specifications should be clearly communicated as part of the project proposal.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q57 -->
+              <div class="accordion-item mb-3 border-0 rounded-3 shadow-sm overflow-hidden faq-item" data-category="cat-8">
+                <h3 class="accordion-header" id="heading57">
+                  <button class="accordion-button fw-bold collapsed py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse57" aria-expanded="false" aria-controls="collapse57">
+                    57. What happens after my solar system is installed?
+                  </button>
+                </h3>
+                <div id="collapse57" class="accordion-collapse collapse" aria-labelledby="heading57" data-bs-parent="#accordionCat8">
+                  <div class="accordion-body text-secondary px-4 pb-4 pt-2">
+                    After installation and commissioning, you will be guided through the basic operation of your system and, where applicable, its monitoring platform.<br><br>
+                    You can also reach out to ADMA Solar for support and guidance related to your system.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STILL HAVE QUESTIONS CTA SECTION -->
+  <section class="py-5 bg-navy-dark text-white position-relative border-top border-secondary">
+    <div class="container py-4 text-center">
+      <div class="max-w-800 mx-auto">
+        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill uppercase mb-3">Custom Solar Advice</span>
+        <h2 class="display-5 text-light fw-extrabold mb-3">Still Have Questions?</h2>
+        <p class="lead text-light opacity-90 mb-4">
+          Every rooftop, electricity bill and energy requirement is different.<br>
+          Talk to ADMA Solar and get clear, personalised guidance before making your solar investment.
+        </p>
+        <div class="p-3 bg-slate-dark border border-secondary rounded-4 mb-4 d-inline-block px-4">
+          <p class="mb-0 fw-bold fs-5 text-gradient-gold">Your energy needs. Your rooftop. The right solar solution.</p>
+        </div>
+        <div>
+          <a href="contact.html" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold text-dark shadow-lg me-sm-2 mb-3 mb-sm-0">
+            Talk to a Solar Expert
+          </a>
+          <a href="calculator.html" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold">
+            Calculate Savings
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  <div id="site-footer"></div>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/leaflet.js"></script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

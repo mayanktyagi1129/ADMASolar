@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Solar System Guide | ADMA Solar</title>
+  <meta name="description" content="Hybrid solar with net metering and battery backup.">
+  <meta name="author" content="ADMA Solar Energy Ltd.">
+  <link rel="icon" href="assets/icons/adma.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" crossorigin src="./assets/main-C8nuNmWS.js"></script>
+</head>
+<body data-page="hybrid-solar">
+  <div id="site-header"></div>
+<main>
+    <!-- HERO HEADER -->
+    <section class="kb-hero-section text-white">
+      <div class="container relative-z">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="kb-badge-hybrid mb-3">🔄 Net-Metering + Lithium Battery Backup</span>
+            <h1 class="display-4 text-light fw-bold mb-3">Hybrid Solar <span class="text-gradient-gold">Systems Guide</span></h1>
+            <p class="lead text-light mb-4">
+              The pinnacle of modern solar technology. Hybrid solar combines the massive electricity bill reduction of
+              On-Grid Net Metering with the seamless, zero-downtime battery backup of Off-Grid systems.
+            </p>
+
+            <!-- Key Quick Stats -->
+            <div class="row g-3 text-center mb-2">
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h5 text-info fw-bold mb-0">Best of Both</div>
+                  <div class="small text-light">Grid + Storage</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h5 text-warning fw-bold mb-0">&lt; 10 ms</div>
+                  <div class="small text-light">UPS Switching</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h5 text-success fw-bold mb-0">100%</div>
+                  <div class="small text-light">Net Meter Credits</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="p-2 bg-white bg-opacity-10 rounded-3 border border-light border-opacity-10">
+                  <div class="h5 text-warning fw-bold mb-0">Smart App</div>
+                  <div class="small text-light">IoT Energy Control</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="kb-image-box shadow-lg">
+              <img src="assets/images/hybrid.webp" alt="Hybrid Solar System Diagram">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS HYBRID SOLAR -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <span class="badge bg-soft-blue text-info fw-bold px-3 py-2 rounded-pill uppercase mb-2">Overview</span>
+            <h2 class="display-6 fw-bold mb-3">What is a Hybrid Solar System?</h2>
+            <p class="text-muted">
+              A <strong>Hybrid solar system</strong> unifies solar panels, a bi-directional hybrid inverter, modular
+              lithium battery wall storage, and the utility discom grid into a single intelligent power microgrid.
+            </p>
+            <p class="text-muted">
+              Standard On-Grid systems are forced to shut down during blackouts to protect grid workers
+              (anti-islanding). A Hybrid system solves this completely: when grid power goes down, the intelligent
+              hybrid inverter immediately isolates the home microgrid and continues powering your loads from solar and
+              batteries.
+            </p>
+
+            <div class="p-4 bg-soft-blue rounded-4 border border-info mt-4">
+              <h3 class="h6 fw-bold text-dark mb-2">⚡ Intelligent Power Prioritization Matrix:</h3>
+              <ul class="small text-muted ps-3 mb-0">
+                <li class="mb-1"><strong>Priority 1:</strong> Solar energy powers active home appliances directly.</li>
+                <li class="mb-1"><strong>Priority 2:</strong> Surplus solar charges the local Lithium-Iron Phosphate
+                  battery bank.</li>
+                <li><strong>Priority 3:</strong> Remaining solar generation is exported to the utility grid via Net
+                  Metering.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card p-4 border-0 bg-slate-dark text-white rounded-4 shadow-lg">
+              <h3 class="h4 fw-bold text-info mb-4">How Hybrid Solar Works (Dual Mode)</h3>
+
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="badge bg-info text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">1</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Daytime Grid-Connected Mode</h4>
+                  <p class="small text-light opacity-75 mb-0">Solar powers loads, tops up the battery storage, and
+                    exports excess units to DISCOM for monthly bill credits.</p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="badge bg-info text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">2</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Instant Blackout Isolation (&lt;10ms)</h4>
+                  <p class="small text-light opacity-75 mb-0">Automatic Transfer Switch isolates grid connection and
+                    transfers home loads to battery in less than 10 milliseconds.</p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="badge bg-info text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">3</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Nighttime Battery Discharge</h4>
+                  <p class="small text-light opacity-75 mb-0">Stored daytime green energy runs lights, fans, TVs, and
+                    refrigerators, reducing expensive night grid utility rates.</p>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3">
+                <div
+                  class="badge bg-info text-white rounded-circle p-3 d-flex align-items-center justify-content-center"
+                  style="width:36px; height:36px;">4</div>
+                <div>
+                  <h4 class="h6 fw-bold text-white mb-1">Peak Tariff Load Shaving</h4>
+                  <p class="small text-light opacity-75 mb-0">Smart IoT firmware automatically avoids drawing power from
+                    the grid during high peak-tariff hours.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESSENTIAL COMPONENTS -->
+    <section class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-soft-blue text-info fw-bold px-3 py-2 rounded-pill uppercase mb-2">Hardware
+            Architecture</span>
+          <h2 class="display-6 fw-bold">Core Components of a Hybrid Solar System</h2>
+          <p class="text-muted">Next-generation smart power control equipment.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-solar mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Smart Hybrid Inverter</h3>
+              <p class="small text-muted mb-0">Bi-directional inverter with dual MPPTs, built-in grid tie export
+                control, battery charger, and emergency UPS transfer relay.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-green mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                  <line x1="16" y1="21" x2="16" y2="5"></line>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Modular Lithium Battery Wall</h3>
+              <p class="small text-muted mb-0">Sleek, wall-mountable LiFePO4 battery modules (5kWh to 30kWh) with smart
+                active cell balancing and 15-year operational life.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-solar mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Bi-Directional Net Meter</h3>
+              <p class="small text-muted mb-0">Measures surplus solar energy sent to the local power utility grid for
+                end-of-month electricity bill offset credits.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="kb-card h-100">
+              <div class="icon-box-green mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">IoT Mobile Monitoring App</h3>
+              <p class="small text-muted mb-0">Real-time smartphone telemetry tracking solar yield, battery charge
+                level, home power consumption, and monthly cost savings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIPLE SYSTEM COMPARISON SUMMARY -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge bg-soft-amber text-warning fw-bold px-3 py-2 rounded-pill uppercase mb-2">System Decision
+            Matrix</span>
+          <h2 class="display-6 fw-bold">Why Hybrid Is The Gold Standard</h2>
+          <p class="text-muted">Compare how Hybrid solar stacks up against standard On-Grid and Off-Grid setups.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="kb-card h-100 border border-warning">
+              <span class="kb-badge-grid mb-3">⚡ Standard On-Grid</span>
+              <h3 class="h5 fw-bold mt-2">On-Grid Solar</h3>
+              <p class="small text-muted mb-3">Cheapest upfront, but shuts down completely during blackouts.</p>
+              <ul class="list-unstyled small">
+                <li class="mb-2 text-success">✓ 100% Net Metering</li>
+                <li class="mb-2 text-success">✓ PM Surya Ghar Subsidy</li>
+                <li class="mb-2 text-danger">✕ No Power During Outages</li>
+                <li class="mb-2 text-danger">✕ Zero Battery Storage</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="kb-card h-100 border border-success">
+              <span class="kb-badge-offgrid mb-3">🔋 Standard Off-Grid</span>
+              <h3 class="h5 fw-bold mt-2">Off-Grid Solar</h3>
+              <p class="small text-muted mb-3">100% backup everywhere, but cannot export extra solar power to the grid.
+              </p>
+              <ul class="list-unstyled small">
+                <li class="mb-2 text-success">✓ 24/7 Power Outage Protection</li>
+                <li class="mb-2 text-success">✓ Works Anywhere (No Grid)</li>
+                <li class="mb-2 text-danger">✕ Wastes Surplus Solar (No Export)</li>
+                <li class="mb-2 text-danger">✕ Not Eligible for Subsidy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="kb-card h-100 border-2 border-info bg-soft-blue">
+              <span class="kb-badge-hybrid mb-3">🔄 Advanced Hybrid</span>
+              <h3 class="h5 fw-bold mt-2">Hybrid Solar</h3>
+              <p class="small text-muted mb-3"> Combines Net Metering bill savings + 100% seamless outage protection.
+              </p>
+              <ul class="list-unstyled small">
+                <li class="mb-2 text-success">✓ 100% Net Metering Export Credits</li>
+                <li class="mb-2 text-success">✓ &lt;10ms Seamless UPS Outage Backup</li>
+                <li class="mb-2 text-success">✓ Lithium Battery Energy Storage</li>
+                <li class="mb-2 text-success">✓ Future-Proof Peak Load Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-5 bg-light text-white text-center">
+      <div class="container py-4">
+        <h2 class="display-6 fw-bold mb-3">Upgrade to a Hybrid Solar Microgrid</h2>
+        <p class="lead text-muted mb-4 max-w-700 mx-auto">
+          Protect your family or enterprise from power outages while enjoying 90%+ utility bill savings.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="calculator.html" class="btn-solar-primary btn-lg">Calculate Hybrid Solar ROI</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/leaflet.js"></script>
+</body>
+</html>
