@@ -13,7 +13,7 @@
     header.innerHTML = `
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="ADMA Solar home">
-          <img src="images/adma-logo.webp" alt="ADMA Solar">
+          <img src="images/logo-official.png" alt="ADMA Solar">
         </a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html" data-page="index.html">Home</a>
@@ -71,7 +71,7 @@
       <div class="wrap">
         <div class="footer-grid">
           <div>
-            <a class="brand" href="index.html"><img src="images/adma-logo.webp" alt="ADMA Solar"></a>
+            <a class="brand" href="index.html"><img src="images/logo-official.png" alt="ADMA Solar"></a>
             <p style="margin-top:16px;max-width:32ch">India's rooftop solar partner. N-Type TOPCon systems, PM Surya Ghar subsidy clearance, and 25-year performance care.</p>
             <p style="margin-top:12px"><a href="${WA}">WhatsApp +91 73033 97790</a></p>
           </div>
